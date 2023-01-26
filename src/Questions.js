@@ -31,6 +31,13 @@ const Questions = ({ question, index }) => {
       >
         {showAnswer ? "Hide Answer" : "Show Answer"}
       </button>
+      {
+        showAnswer &&
+        <div>
+          <h3>Explanation:</h3>
+          <p dangerouslySetInnerHTML={{ __html: question.explanation }}></p>
+        </div>
+      }
       <hr></hr>
     </div>
   );
